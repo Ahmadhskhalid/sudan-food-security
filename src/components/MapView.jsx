@@ -2,8 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import { STATES, IPC_CONFIG, COMMODITY_COLORS, PRICE_LEVELS } from "../data/stateData";
 
-const TILE_URL = "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png";
-const TILE_ATTR = '&copy; <a href="https://carto.com">CARTO</a> &copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>';
+const TILE_URL = "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}";
+const TILE_ATTR = 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ';
 
 function getColor(stateId, layer) {
   const sd = STATES.find(s => s.id === stateId);
